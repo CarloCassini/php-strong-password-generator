@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- aggiungo bootstrap -->
@@ -19,7 +17,25 @@
 
 <body>
 
-    <div class="container my-5"> ad</div>
+    <div class=" container mt-5 w-50">
+
+        <div class="card">
+            <div class="card-header">
+                scegli la lunghezza della tua password (tra 4 caratteri e 20)
+            </div>
+            <div class="list-group list-group-flush">
+                <form method="get" action="">
+                    <input class="form-control" type="number" id="quantity" name="quantity" min="4" max="20" value="4x"
+                        placeholder="inserisci qui il numero">
+
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
 </body>
 
 </html>
