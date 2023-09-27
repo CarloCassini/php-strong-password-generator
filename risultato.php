@@ -1,6 +1,11 @@
 <?php
 
 session_start();
+include __DIR__ . '/components/functions.php';
+
+$all_typo = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,!,@,#,$,%,^,&,*,(,)";
+$espl_typo = explode(',', $all_typo);
+$num_char = isset($_GET['quantity']) ? (int) $_GET['quantity'] : 0;
 
 ?>
 
@@ -29,8 +34,8 @@ session_start();
         <h1>i risultato è:</h1>
         <h2>
             <?php
-
-            echo $_SESSION['newPassword'] ?>
+            $new_password = genera_password($espl_typo, $num_char);
+            echo $new_password ?>
         </h2>
 
         <h1><a href="index.php">indietro</a></h1>

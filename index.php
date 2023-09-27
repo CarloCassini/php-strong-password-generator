@@ -2,31 +2,6 @@
 
 session_start();
 
-$all_typo = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,!,@,#,$,%,^,&,*,(,)";
-$espl_typo = explode(',', $all_typo);
-
-$num_char = isset($_GET['quantity']) ? (int) $_GET['quantity'] : 0;
-
-// $has_number = isset($_GET['quantity']);
-
-include __DIR__ . '/components/functions.php';
-
-// function genera_password($range_typo, $range_leng)
-// {
-
-//     $result = "";
-//     $max_leng_array = sizeof($range_typo);
-//     for ($i = 0; $i < $range_leng; $i++) {
-
-//         $random_number = rand(0, $max_leng_array - 1);
-
-//         $result = $result . $range_typo[$random_number];
-//     }
-//     ;
-
-//     return $result;
-// }
-// ;
 
 ?>
 
@@ -42,13 +17,12 @@ include __DIR__ . '/components/functions.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"
         defer>
-    </script>
+        </script>
     <title>Document</title>
 
 </head>
 
 <body>
-
 
     <div class=" container mt-5 w-50">
 
@@ -57,7 +31,7 @@ include __DIR__ . '/components/functions.php';
                 scegli la lunghezza della tua password (tra 4 caratteri e 20)
             </div>
             <div class="list-group list-group-flush">
-                <form method="get" action="">
+                <form method="get" action="risultato.php">
                     <input class="form-control" type="number" id="quantity" name="quantity" min="4" max="20" value="4x"
                         placeholder="inserisci qui il numero">
 
@@ -65,14 +39,6 @@ include __DIR__ . '/components/functions.php';
             </div>
         </div>
 
-        <h1>i risultato è:</h1>
-        <h2>
-            <?php
-            $new_password = genera_password($espl_typo, $num_char);
-            $_SESSION['newPassword'] = $new_password;
-            echo $_SESSION['newPassword'] ?>
-        </h2>
-        <a href="risultato.php"> go</a>
 
 
 
