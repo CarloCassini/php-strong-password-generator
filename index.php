@@ -1,3 +1,30 @@
+<?php
+$all_typo = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,!,@,#,$,%,^,&,*,(,)";
+$espl_typo = explode(',', $all_typo);
+
+$num_char = (int) $_GET['quantity'];
+
+// $has_number = isset($_GET['quantity']);
+
+function genera_password($range_typo, $range_leng)
+{
+
+    $result = "";
+    $max_leng_array = sizeof($range_typo);
+    for ($i = 0; $i < $range_leng; $i++) {
+
+        $random_number = rand(0, $max_leng_array - 1);
+
+        $result = $result . $range_typo[$random_number];
+    }
+    ;
+
+    return $result;
+}
+;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +43,8 @@
 </head>
 
 <body>
+    <?php echo sizeof($espl_typo); ?>
+
 
     <div class=" container mt-5 w-50">
 
@@ -31,6 +60,11 @@
                 </form>
             </div>
         </div>
+
+        <h1>i risultato è:</h1>
+        <h2>
+            <?php echo genera_password($espl_typo, $num_char); ?>
+        </h2>
 
 
 
