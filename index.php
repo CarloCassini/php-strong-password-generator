@@ -6,22 +6,24 @@ $num_char = (int) $_GET['quantity'];
 
 // $has_number = isset($_GET['quantity']);
 
-function genera_password($range_typo, $range_leng)
-{
+include __DIR__ . '/components/functions.php';
 
-    $result = "";
-    $max_leng_array = sizeof($range_typo);
-    for ($i = 0; $i < $range_leng; $i++) {
+// function genera_password($range_typo, $range_leng)
+// {
 
-        $random_number = rand(0, $max_leng_array - 1);
+//     $result = "";
+//     $max_leng_array = sizeof($range_typo);
+//     for ($i = 0; $i < $range_leng; $i++) {
 
-        $result = $result . $range_typo[$random_number];
-    }
-    ;
+//         $random_number = rand(0, $max_leng_array - 1);
 
-    return $result;
-}
-;
+//         $result = $result . $range_typo[$random_number];
+//     }
+//     ;
+
+//     return $result;
+// }
+// ;
 
 ?>
 
@@ -43,7 +45,6 @@ function genera_password($range_typo, $range_leng)
 </head>
 
 <body>
-    <?php echo sizeof($espl_typo); ?>
 
 
     <div class=" container mt-5 w-50">
