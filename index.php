@@ -42,7 +42,7 @@ include __DIR__ . '/components/functions.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"
         defer>
-        </script>
+    </script>
     <title>Document</title>
 
 </head>
@@ -72,6 +72,7 @@ include __DIR__ . '/components/functions.php';
             $_SESSION['newPassword'] = $new_password;
             echo $_SESSION['newPassword'] ?>
         </h2>
+        <a href="risultato.php"> go</a>
 
 
 
